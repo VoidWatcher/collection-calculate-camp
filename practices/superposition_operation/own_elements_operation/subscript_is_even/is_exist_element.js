@@ -6,11 +6,14 @@ var is_exist_element = function(collection,element){
     evenCollection.push(collection.splice(i, 1));
   }
   evenCollection = evenCollection.reduce((preVal, curVal) => preVal.concat(curVal));
-  
+
+  //return evenCollection;
+
   if (evenCollection.indexOf(element) != -1) {
     return true;
   } else if (evenCollection.indexOf(element) == -1) {
     return false;
   }
+
 };
 module.exports = is_exist_element;
